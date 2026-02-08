@@ -3,8 +3,8 @@ function checkPassword() {
     const password = document.getElementById('passwordInput').value;
     const errorMsg = document.getElementById('errorMessage');
     
-    // Change 'birthday' to your desired password
-    if (password === 'birthday') {
+    // Password is 'hampi' (case-insensitive)
+    if (password.toLowerCase() === 'hampi') {
         // Hide landing page
         document.getElementById('landingPage').style.display = 'none';
         // Show birthday page
@@ -33,30 +33,10 @@ function checkPassword() {
     }
 }
 
-// Show hint
-function showHint() {
-    const hintBox = document.getElementById('hintBox');
-    hintBox.style.display = hintBox.style.display === 'block' ? 'none' : 'block';
-}
-
 // Allow Enter key to submit
 document.getElementById('passwordInput').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         checkPassword();
-    }
-});
-
-// Age calculation
-document.getElementById('ageInput').addEventListener('input', function(e) {
-    const age = parseInt(e.target.value);
-    const calculation = document.getElementById('calculation');
-    
-    if (age) {
-        const days = age * 365;
-        const hours = days * 24;
-        calculation.innerHTML = `${days.toLocaleString()} days or ${hours.toLocaleString()} hours`;
-    } else {
-        calculation.innerHTML = '';
     }
 });
 
@@ -85,32 +65,4 @@ function createConfetti() {
     setTimeout(() => {
         confetti.remove();
     }, 3000);
-}
-
-// Blow cake (candles)
-let cakeClicks = 0;
-function blowCake() {
-    cakeClicks++;
-    const cake = document.querySelector('.cake');
-    
-    if (cakeClicks === 1) {
-        cake.textContent = '🎂🕯️';
-    } else if (cakeClicks === 2) {
-        cake.textContent = '🎂💨';
-    } else if (cakeClicks === 3) {
-        cake.textContent = '🎂✨';
-        alert('🎉 Make a wish! 🎉');
-        setTimeout(() => {
-            cake.textContent = '🎂';
-            cakeClicks = 0;
-        }, 2000);
-    }
-}
-
-// Pop balloon
-function popBalloon(balloon) {
-    balloon.textContent = '💥';
-    setTimeout(() => {
-        balloon.style.display = 'none';
-    }, 300);
 }

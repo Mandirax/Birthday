@@ -34,7 +34,7 @@
                     type="password" 
                     id="passwordInput" 
                     class="password-input" 
-                    placeholder="Your maritime password..." 
+                    placeholder="Your password..." 
                     autocomplete="off"
                 >
             </div>
@@ -47,34 +47,16 @@
                 ❌ Wrong password! The seas remain closed...
             </div>
             
-            <div class="forgot-password">
-                <a class="forgot-link" onclick="showHint()">
-                    🔍 Forgot password? Get a hint!
-                </a>
-            </div>
-            
             <div class="hint-box" id="hintBox">
-                💡 <strong>Hint:</strong> Think of something the birthday sailor loves... 
-                or ask them directly! 😉
+                💡 <strong>Hint:</strong> Think of something the birthday sailor once visited and fell in love for rest of the life! 😉
             </div>
         </div>
     </div>
 
     <!-- Birthday Page (hidden initially) -->
     <div id="birthdayPage" class="birthday-page">
-        <div class="container">
+        <div class="birthday-container">
             <h1 class="birthday-title">🎉 HAPPY BIRTHDAY! 🎉</h1>
-            <div class="message">
-                🌟 Wishing you smooth sailing, joy, laughter, and cake! 🌟
-            </div>
-            
-            <div class="cake" onclick="blowCake()">🎂</div>
-            
-            <div class="age-container">
-                <p>You're turning:</p>
-                <input type="number" class="age-input" id="ageInput" placeholder="Age">
-                <p>That's <span id="calculation"></span> amazing!</p>
-            </div>
             
             <button class="celebrate-button" onclick="celebrate()">🎊 CELEBRATE! 🎊</button>
             
@@ -82,12 +64,6 @@
                 ✨ You're AWESOME! ✨
             </div>
         </div>
-
-        <!-- Balloons -->
-        <div class="balloon" style="left: 10%; top: 20%; animation-delay: 0s;" onclick="popBalloon(this)">🎈</div>
-        <div class="balloon" style="left: 85%; top: 60%; animation-delay: 1s;" onclick="popBalloon(this)">🎈</div>
-        <div class="balloon" style="left: 15%; top: 70%; animation-delay: 2s;" onclick="popBalloon(this)">🎈</div>
-        <div class="balloon" style="left: 80%; top: 15%; animation-delay: 1.5s;" onclick="popBalloon(this)">🎈</div>
     </div>
 
     <script src="script.js"></script>
