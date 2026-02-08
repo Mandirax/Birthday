@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚓ Access Required ⚓</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <!-- Floating decorations -->
+        <div class="floating-icon" style="left: 10%; top: 15%; animation-delay: 0s;">⚓</div>
+        <div class="floating-icon" style="left: 85%; top: 25%; animation-delay: 1s;">⚓</div>
+        <div class="floating-icon" style="left: 15%; top: 75%; animation-delay: 2s;">🚢</div>
+        <div class="floating-icon" style="left: 80%; top: 65%; animation-delay: 1.5s;">⛵</div>
+        <div class="floating-icon" style="left: 50%; top: 10%; animation-delay: 0.5s;">🧭</div>
+
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+
+        <div class="container">
+            <div class="anchor-header">⚓</div>
+            <h1>AHOY, SAILOR!</h1>
+            <p class="subtitle">🌊 Navigate through the seas to unlock your surprise 🌊</p>
+            
+            <div class="input-container">
+                <label class="input-label" for="passwordInput">
+                    <span class="compass">🧭</span> Enter Secret Code:
+                </label>
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    class="password-input" 
+                    placeholder="Your maritime password..." 
+                    autocomplete="off"
+                >
+            </div>
+            
+            <button class="submit-btn" onclick="checkPassword()">
+                ⛵ SET SAIL ⛵
+            </button>
+            
+            <div class="error-message" id="errorMessage">
+                ❌ Wrong password! The seas remain closed...
+            </div>
+            
+            <div class="forgot-password">
+                <a class="forgot-link" onclick="showHint()">
+                    🔍 Forgot password? Get a hint!
+                </a>
+            </div>
+            
+            <div class="hint-box" id="hintBox">
+                💡 <strong>Hint:</strong> Think of something the birthday sailor loves... 
+                or ask them directly! 😉
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Page (hidden initially) -->
+    <div id="birthdayPage" class="birthday-page">
+        <div class="container">
+            <h1 class="birthday-title">🎉 HAPPY BIRTHDAY! 🎉</h1>
+            <div class="message">
+                🌟 Wishing you smooth sailing, joy, laughter, and cake! 🌟
+            </div>
+            
+            <div class="cake" onclick="blowCake()">🎂</div>
+            
+            <div class="age-container">
+                <p>You're turning:</p>
+                <input type="number" class="age-input" id="ageInput" placeholder="Age">
+                <p>That's <span id="calculation"></span> amazing!</p>
+            </div>
+            
+            <button class="celebrate-button" onclick="celebrate()">🎊 CELEBRATE! 🎊</button>
+            
+            <div class="surprise" id="surprise">
+                ✨ You're AWESOME! ✨
+            </div>
+        </div>
+
+        <!-- Balloons -->
+        <div class="balloon" style="left: 10%; top: 20%; animation-delay: 0s;" onclick="popBalloon(this)">🎈</div>
+        <div class="balloon" style="left: 85%; top: 60%; animation-delay: 1s;" onclick="popBalloon(this)">🎈</div>
+        <div class="balloon" style="left: 15%; top: 70%; animation-delay: 2s;" onclick="popBalloon(this)">🎈</div>
+        <div class="balloon" style="left: 80%; top: 15%; animation-delay: 1.5s;" onclick="popBalloon(this)">🎈</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
